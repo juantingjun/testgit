@@ -1,7 +1,6 @@
-import Image,ImageEnhance,ImageFilter
+from PIL import Image,ImageEnhance,ImageFilter
 import sys
-image_name="./test.jpeg";
-im=Image.open(image_name);
+im=Image.open('E:/python/test.jpeg');
 im=im.filter(ImageFilter.MedianFilter())
 enhancer=ImageEnhance.Contrast(im);
 im=enhancer.enhance(2)
